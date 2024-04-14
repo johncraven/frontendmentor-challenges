@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+  <section class="expenses">
+    <article class="balance-card">
+      <div class="balance">
+        <h2 class="balance-header">My balance</h2>
+        <p class="balance-value">$921.48</p>
+      </div>
+      <img src="images/logo.svg" alt="logo" width="72" height="48">
+    </article>
+    <article class="spending-card">
+      <article class="spending-weekly">
+        <h1 class="spending-weekly-title">
+          Spending - Last 7 days
+        </h1>
+        <div class="spending-weekly-figure">
+          <div class="chart-column">
+            <div class="bar-container">
+
+              <div id="val-mon" class="chart-value">
+                <div class="chart-value-detail">$34.00</div>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="chart-label">mon</div>
+          </div>
+          <div class="chart-column">
+            <div class="bar-container">
+              <div id="val-tue" class="chart-value">
+                <div class="chart-value-detail">$34.00</div>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="chart-label">tue</div>
+          </div>
+          <div class="chart-column">
+            <div class="bar-container">
+              <div id="val-wed" class="chart-value">
+                <div class="chart-value-detail">$34.00</div>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="chart-label">wed</div>
+          </div>
+          <div class="chart-column">
+            <div class="bar-container">
+              <div id="val-thu" class="chart-value">
+                <div class="chart-value-detail">$34.00</div>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="chart-label">thu</div>
+          </div>
+          <div class="chart-column">
+            <div class="bar-container">
+              <div id="val-fri" class="chart-value">
+                <div class="chart-value-detail">$34.00</div>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="chart-label">fri</div>
+          </div>
+          <div class="chart-column">
+            <div class="bar-container">
+              <div id="val-sat" class="chart-value">
+                <div class="chart-value-detail">$34.00</div>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="chart-label">sat</div>
+          </div>
+          <div class="chart-column">
+            <div class="bar-container">
+              <div id="val-sun" class="chart-value">
+                <div class="chart-value-detail">$34.00</div>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="chart-label">sun</div>
+          </div>
+        </div>
+      </article>
+      <hr>
+      <article class="spending-monthly">
+        <div class="current-month-total">
+          <h2 class="current-month-header">Total this month</h2>
+          <p class="current-month-value">$478.33</p>
+        </div>
+
+        <div class="previous-month">
+          <p class="previous-month-value">+2.4%</p>
+          <h2 class="previous-month-header">from last month</h2>
+        </div>
+      </article>
+    </article>
+  </section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/johncraven">John Craven</a>.
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

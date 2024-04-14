@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+:root {
+    --primary: 10, 79%, 65%;
+    --secondary: 186, 34%, 60%;
+
+    --clr-primary: hsl(10, 79%, 65%);
+    --clr-secondary: hsl(186, 34%, 60%);
+    --clr-dark-brown: hsl(25, 47%, 15%);
+    --clr-med-brown: hsl(28, 10%, 53%);
+    --clr-cream: hsl(27, 66%, 92%);
+    --clr-pale-orange: hsl(33, 100%, 98%);
+
+    --fs-200: 14px;
+    --fs-300: 16px;
+    --fs-400: 18px;
+    --fs-500: 22px;
+    --fs-600: 28px;
+    --fs-700: 38px;
+
+    --font-family: 'DM Sans', sans-serif;
+
+    --border-radius: 13px;
+    --card-padding: 20px 35px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: center;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+body {
+    background-color: var(--clr-cream);
+    font-family: var(--font-family);
+    font-size: 18px;
+    padding: 1rem;
+    display: flex;
+
+    /*     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; */
+}
+
+.expenses {
+
+    max-width: 550px;
+    margin: auto;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.balance-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--clr-primary);
+    color: var(--clr-pale-orange);
+    border-radius: var(--border-radius);
+    padding: var(--card-padding);
+
+    & .balance-header {
+        font-size: var(--fs-300);
+        margin-bottom: 5px;
+    }
+
+    & .balance-value {
+        font-size: var(--fs-600);
+        font-weight: bold;
+    }
+}
+
+.spending-card {
+    background-color: var(--clr-pale-orange);
+    color: var(--clr-dark-brown);
+    border-radius: var(--border-radius);
+    padding: 20px 10px;
+}
+
+@media (min-width: 500px) {
+    .spending-card {
+        padding: 20px 45px;
+    }
+}
+
+.spending-weekly-title {
+    font-size: var(--fs-600);
+    font-weight: bold;
+}
+
+.spending-weekly-figure {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    aspect-ratio: 4/3;
+}
+
+@media (min-width: 500px) {
+    .spending-weekly-figure {
+        gap: 15px;
+    }
+}
+
+.chart-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.bar-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bar {
+    background-color: var(--clr-primary);
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.chart-value {
+    /* background-color: var(--clr-med-brown); */
+    border-radius: 4px;
+    min-width: 30px;
+    transition-property: height;
+    transition-duration: 5s;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart-value-detail {
+    background-color: var(--clr-dark-brown);
+    color: var(--clr-cream);
+    font-size: var(--fs-300);
+
+    padding: 6px 8px;
+    border-radius: 4px;
+
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.chart-value:hover {
+    cursor: pointer;
+
+    & .bar {
+        opacity: 50%;
+    }
+
+    & .chart-value-detail {
+        display: block;
+    }
+}
+
+.chart-label {
+    color: var(--clr-med-brown);
+    font-size: var(--fs-200);
+    margin: 10px auto 30px;
+}
+
+hr {
+    background-color: var(--clr-cream);
+    height: 3px;
+    border: none;
+    margin-bottom: 30px
+}
+
+.spending-monthly {
+    display: flex;
+    justify-content: space-between;
+    align-items: bottom;
+    margin-bottom: 20px;
+}
+
+.current-month-header {
+    color: var(--clr-med-brown);
+    font-size: var(--fs-300);
+}
+
+.current-month-value {
+    font-size: var(--fs-700);
+    font-weight: bold;
+}
+
+
+.previous-month {
+    text-align: right;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.previous-month-header {
+    color: var(--clr-med-brown);
+    font-size: var(--fs-300);
+}
+
+.previous-month-value {
+    font-weight: bold;
+}
