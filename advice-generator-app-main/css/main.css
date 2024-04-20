@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
 }
 
-/* variables */
+/*#region*/
 :root {
   --clr-primary: hsl(150, 100%, 66%);
   --clr-light: hsl(193, 38%, 86%);
@@ -29,7 +29,7 @@ body {
 
   --fw: 800;
 }
-/* end variables */
+/*#endregion*/
 
 body {
   background-color: var(--clr-dark-blue);
