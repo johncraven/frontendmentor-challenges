@@ -21,6 +21,7 @@
     --fw-normal: 400;
     --fw-bold:   600;
     --fw-bolder: 700;
+    --border-radius: 30px;
 }
 
 body {
@@ -29,12 +30,22 @@ body {
     font-family: var(--fnt-body);
     color: var(--clr-lightbrown);
     line-height: 1.5rem;
+    background-color: var(--clr-eggshell);
+}
+
+.recipe-wrapper {
+    background-color: white;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 25px;
 }
 
 img{
     display: block;
     max-width: 100%;
 }
+
+
 
 .inline-title {
     font-weight: bold;
@@ -50,12 +61,39 @@ h2 {
 
 .recipe-article {
     padding-inline: 2rem;
+    padding-bottom: 2rem;
 }
+
+.attribution {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .recipe-article {
+        padding-inline: 0;
+    }
+
+    .recipe-wrapper {
+        margin-block: 5rem;
+        padding: 2.25rem;
+    }
+
+    .attribution {
+        display: block;
+        text-align: center;
+    }
+
+    img {
+        border-radius: 15px;
+    };
+}
+
 
 .recipe-title {
     font-size: 2.25rem;
     font-weight: 400;
     line-height: 1.1;
+    color: var(--clr-darkgrey)
 }
 
 .timing {
@@ -72,9 +110,30 @@ h2 {
 
 li {
     padding-left: 1.25rem;
+    padding-bottom: 0.3rem;
 }
 li p {
     display: inline-block;
     vertical-align: middle;
     margin-block: 0;
+}
+
+.nutrition__table {
+    width: 100%;
+}
+
+table {
+    border-collapse:collapse;
+}
+td {
+    border-bottom: 2px solid var(--clr-lightgrey);
+    padding: 0.5rem 2rem;
+}
+tr:last-child td{
+    border-bottom: none;
+}
+
+tr td:nth-child(2) {
+    color: var(--clr-nutmeg);
+    font-weight: 600;
 }
