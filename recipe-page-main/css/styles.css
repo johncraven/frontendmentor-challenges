@@ -35,7 +35,7 @@ body {
 
 .recipe-wrapper {
     background-color: white;
-    max-width: 800px;
+    max-width: 650px;
     margin: auto;
     border-radius: 25px;
 }
@@ -74,7 +74,7 @@ h2 {
     }
 
     .recipe-wrapper {
-        margin-block: 5rem;
+        margin-block: 2rem;
         padding: 2.25rem;
     }
 
