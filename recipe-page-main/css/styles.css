@@ -26,6 +26,9 @@
 body {
     margin:0;
     font-size: 16px;
+    font-family: var(--fnt-body);
+    color: var(--clr-lightbrown);
+    line-height: 1.5rem;
 }
 
 img{
@@ -35,4 +38,43 @@ img{
 
 .inline-title {
     font-weight: bold;
+    color: var(--clr-lightbrown);
+}
+
+h1, h2, h3 {
+    font-family: var(--fnt-title);
+}
+h2 {
+    color: var(--clr-nutmeg)
+}
+
+.recipe-article {
+    padding-inline: 2rem;
+}
+
+.recipe-title {
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.timing {
+    background-color: var(--clr-rosewhite);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.timing__title {
+    font-family: var(--fnt-body);
+    color: var(--clr-raspberry);
+    margin:0;
+}
+
+li {
+    padding-left: 1.25rem;
+}
+li p {
+    display: inline-block;
+    vertical-align: middle;
+    margin-block: 0;
 }
