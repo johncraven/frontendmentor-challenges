@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-neutral-white: hsl(0,0%,100%);
+    --clr-neutral-light: hsl(0,0%,20%);
+    --clr-neutral-dark:  hsl(0,0%,12%);
+    --clr-neutral-black: hsl(0,0%,8%);
+    --clr-primary:       hsl(75,94%,57%);
+
+    --font-family: Inter, sans-serif;
+
+    --fontsize-body: 14px;
+
+    --fontweight-normal: 400;
+    --fontweight-bold:   600;
+    --fontweight-bolder: 700;
+}
+
+body {
+    margin:0;
+    background-color: var(--clr-neutral-black);
+    color: var(--clr-neutral-white);
+    font-size: 14px;
+    font-family: var(--font-family);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+}
+
+.social {
+    max-width: 350px;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 10px;
+    flex-grow: 1;
+
+    background-color: var(--clr-neutral-dark);
+
+    text-align: center;
+
+}
+
+.social__avatar {
+    border-radius: 50%;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.social__name {
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.social__location{
+    color: var(--clr-primary);
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+}
+
+.social__description {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 25px 0;
+}
+
+.social__navlinks-list {
+    list-style: none;
+    padding:0;
+    margin-bottom: 0;
+}
+
+.social_link {
+    background-color: var(--clr-neutral-light);
+    color: var(--clr-neutral-white);
+    margin-block: 15px;
+    border-radius: 7px;
+}
+
+.social_link a{
+    display: block;
+    padding: 15px;
+    color:var(--clr-neutral-white);
+    text-decoration: none;
+    font-weight:  600;
+}
+
+.social_link:last-of-type {
+    margin-bottom: 0;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+
+    font-size: 11px;
+    text-align: center;
+    color:hsl(230, 24%, 30%)}
+
+    .attribution a { color: hsl(229, 22%, 44%); }
