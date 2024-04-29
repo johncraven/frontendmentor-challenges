@@ -1,3 +1,76 @@
+@font-face {
+  font-family: "Work Sans";
+  src: url("assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-primary: hsl(292, 42%, 14%);
+  --clr-primary-light: hsl(275, 100%, 97%);
+  --clr-gray: hsl(292, 16%, 49%);
+
+  --fs-400: 16px;
+  --fs-600: 35px;
+
+  --font-family: Work Sans;
+
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+body {
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--clr-primary-light);
+
+  font-family: "Work Sans";
+  font-weight: var(--fw-400);
+  font-size: var(--fs-400);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  margin-block-start: 9rem;
+  margin-inline: 1rem;
+  border-radius: 10px;
+
+  padding: 2rem;
+
+  background-color: var(--clr-white);
+}
+
+.info__title-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.3rem;
+}
+
+.info__title {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-700);
+}
+
+.star {
+  width: 1.6rem;
 }
