@@ -5,34 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
-
-    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"/>
     <title>Frontend Mentor | FAQ accordion</title>
+    <link rel="stylesheet" href="style.css" />
+
   </head>
   <body>
     <main>
       <article class="info">
         <header>
           <div class="info__title-container">
-            <img
-              class="star"
-              src="assets/images/icon-star.svg"
-              alt="star icon"
-            />
+            <img class="star" src="assets/images/icon-star.svg" alt="star icon"/>
             <h1 class="info__title">FAQs</h1>
           </div>
         </header>
-        <details class="info__detail">
+        <details id="detail1" class="info__detail">
           <summary class="info__summary">
             <p class="info__summary-text">
               What is Frontend Mentor, and how will it help me?
             </p>
+            <img class="detail-icon" src="assets/images/icon-plus.svg" >
           </summary>
           <p class="info__detail-text">
             Frontend Mentor offers realistic coding challenges to help
@@ -44,6 +36,7 @@
         <details class="info__detail">
           <summary class="info__summary">
             <p class="info__summary-text">Is Frontend Mentor free?</p>
+            <img class="detail-icon" src="assets/images/icon-plus.svg" >
           </summary>
           <p class="info__detail-text">
             Yes, Frontend Mentor offers both free and premium coding challenges,
@@ -56,6 +49,7 @@
             <p class="info__summary-text">
               Can I use Frontend Mentor projects in my portfolio?
             </p>
+            <img class="detail-icon" src="assets/images/icon-plus.svg" >
           </summary>
           <p class="info__detail-text">
             Yes, you can use projects completed on Frontend Mentor in your
@@ -66,8 +60,10 @@
         <details class="info__detail">
           <summary class="info__summary">
             <p class="info__summary-text">
-              How can I get help if I'm stuck on a Frontend Mentor challenge?
+              How can I get help if I'm stuck on a challenge?
             </p>
+            <img class="detail-icon" src="assets/images/icon-plus.svg" >
+
           </summary>
           <p class="info__detail-text">
             The best place to get help is inside Frontend Mentor's Discord
@@ -84,6 +80,8 @@
           >Frontend Mentor</a
         >. Coded by <a href="#">Your Name Here</a>.
       </div>
+
+      <script src="toggle-detail.js"></script>
     </footer>
   </body>
 </html>
