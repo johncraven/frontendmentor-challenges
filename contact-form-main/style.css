@@ -1,0 +1,245 @@
+@font-face {
+    font-family: Karla;
+    src: url(./assets/fonts/Karla-VariableFont_wght.ttf);
+}
+
+/* #region CSSRESET */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+
+}
+
+body {
+    min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+/* #endregion CSSRESET */
+
+/* #region VARS */
+:root {
+    --primary-200: hsl(148, 38%, 91%);
+    --primary-600: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+
+    --clr-white: hsl(0, 0%, 100%);
+    --grey-500: hsl(186, 15%, 59%);
+    --grey-900: hsl(187, 24%, 22%);
+
+    --font-size-md: 16px;
+    --font-family: Karla;
+
+}
+
+/* #endregion VARS */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-inline: 1rem;
+    padding-top: 1rem;
+    font-size: 16px;
+    font-family: Karla, sans-serif;
+    color: var(--grey-900);
+    background-color: var(--primary-200);
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--grey-900);
+}
+
+.container {
+    background-color: var(--clr-white);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 750px;
+}
+
+.flex--col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.grid--2col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+input, textarea {
+    cursor: pointer;
+}
+
+@media (min-width: 550px) {
+    .grid--2col {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .span--2 {
+        grid-column: span 2;
+    }
+
+    .container {
+        margin-top: 8rem;
+        padding: 2rem;
+    }
+}
+
+fieldset {
+    border: none;
+}
+
+input {
+    padding: 1rem;
+}
+
+.form-group:has(input[required]) label::after,
+.form-group:has(textarea[required]) label::after,
+.form-group:has(input[required]) legend::after {
+    content: " *";
+    color: var(--primary-600);
+}
+
+.form-group:has(input[type="radio"]) label::after {
+    content: none;
+}
+
+
+.btn {
+    background-color: var(--primary-600);
+    color: var(--clr-white);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.border {
+    border-radius: 10px;
+    border: 2px solid var(--grey-500);
+    padding: 1rem;
+}
+
+.border:focus {
+    border: 2px solid var(--primary-600);
+}
+
+.border:active{
+    background-color: var(--primary-200);
+}
+
+label:has(input[type="radio"]:checked) {
+    background-color: var(--primary-200);
+}
+
+legend {
+    margin-bottom: 0.75rem;
+}
+
+textarea {
+    resize: none;
+    height: 7rem;
+}
+
+.flex-start {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.gap-1{
+    gap: 1rem;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+.attribution {
+    justify-self: flex-end;
+    font-size: 11px;
+    text-align: center;
+}
+
+
+.attribution a {
+color: hsl(228, 45%, 44%);
+}
+
+
+.toast {
+    opacity: 0%;
+    visibility: hidden;
+    padding: 1.25rem 1rem;
+    background-color: var(--grey-900);
+    border-radius: 10px;
+    color: white;
+    position: fixed;
+    margin-top: 1rem;
+    /* transform: translateY(-500px); */
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+}
+
+.toast.show{
+    transform: translateY(0);
+    opacity: 100%;
+    visibility: visible;
+}
+
+.toast__header {
+    font-weight: bold;
+}
+
+.toast__detail{
+    font-size: 12px;
+}
+
+.field-error{
+    color: var(--red);
+    display: none;
+}
+
+.form-group:has(:is(input, textarea):user-invalid) .field-error{
+    display: block;
+}
+.form-group:has(:is(input, textarea):user-invalid) .border{
+    border-color: var(--red);
+}
+
+input[type="radio"]:checked {
+    background-image: url(./assets/images/icon-radio-selected.svg);
+}
+
+

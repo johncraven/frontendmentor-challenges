@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+
+    <form action="" class="grid--2col" id="help-form">
+      <div class="form-group flex--col">
+        <label for="firstname">First Name</label>
+        <input type="text" class="border" name="firstname" id="firstname" required="true">
+        <div class="field-error">This field is required</div>
+      </div>
+
+      <div class="form-group  flex--col">
+        <label for="lastname">Last Name</label>
+        <input type="text" class="border" name="lastname" id="lastname" required="true">
+        <div class="field-error">This field is required</div>
+      </div>
+
+      <div class="form-group flex--col span--2">
+        <label for="email">Email Address</label>
+        <input type="email" class="border" name="email" id="email" required>
+        <div class="field-error">Please enter a valid email address</div>
+      </div>
+
+      <fieldset class="form-group span--2">
+        <legend>Query Type</legend>
+        <div class="flex-col">
+          <div class="grid--2col">
+            <label for="general" class="noreqsym border flex-start gap-1">
+              <input type="radio" name="inquiry-type" id="general" required>
+              General Enquiry
+            </label>
+            <label for="support" class="noreqsym border flex-start gap-1">
+              <input type="radio" name="inquiry-type" id="support" required>
+              Support Request
+            </label>
+          </div>
+        </div>
+        <div class="field-error">Please select a query type</div>
+      </fieldset>
+
+      <div class="form-group flex--col span--2">
+        <label for="message">Message</label>
+        <textarea name="message" class="border" id="message" required placeholder="Tell us what you need"></textarea>
+        <div class="field-error">This field is required</div>
+      </div>
+
+      <div class="form-group flex--col span--2">
+        <div class="flex-start gap-1">
+          <input type="checkbox" name="consent" id="consent" required>
+          <label for="consent">I consent to being contacted by the team</label>
+        </div>
+        <div class="field-error">To submit this form, please consent to being contacted</div>
+      </div>
+
+      <input type="submit" class="btn span--2" value="Submit">
+
+    </form>
+  </div>
+
+  <div class="toast flex--col gap-1" id="success-toast">
+    <div class="toast__header flex-start gap-1">
+      <img src="assets/images/icon-success-check.svg" alt="check icon">
+      Message Sent!
+    </div>
+    <div class="toast__detail">
+      Thanks for completing the form.
+      We'll be in touch soon!
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">John Craven</a>.
+  </div>
+
+  <script src="./toast.js"></script>
+
+
+
+</body>
+
+</html>
