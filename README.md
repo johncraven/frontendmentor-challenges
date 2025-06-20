@@ -14,4 +14,5 @@ The solutions below are hosted through this repo using github pages.
 | [Recipe page](https://johncraven.github.io/frontendmentor-challenges/recipe-page-main/index.html)                                   | Apr 2024  |   1   |
 | [Social links profile](https://johncraven.github.io/frontendmentor-challenges/social-links-profile-main/index.html)                 | Apr 2024  |   1   |
 | [Blog preview card](https://johncraven.github.io/frontendmentor-challenges/blog-preview-card-main/index.html)                       | Apr 2024  |   1   |
-| [FAQ Accordion](https://johncraven.github.io/frontendmentor-challenges/faq-accordion-main/index.html)                               | APR 2024  |   1   |
+| [FAQ Accordion](https://johncraven.github.io/frontendmentor-challenges/faq-accordion-main/index.html)                               | Apr 2024  |   1   |
+| [Contact Form](https://github.com/johncraven/frontendmentor-challenges/tree/main/contact-form-main)                                 | Jun 2025  |   2   |
